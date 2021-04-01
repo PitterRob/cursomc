@@ -21,7 +21,7 @@ public class EnderecoResource {
 	private EnderecoService service;
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public ResponseEntity<?> findId(@PathVariable Integer id) {
+	public ResponseEntity<Endereco> findId(@PathVariable Integer id) {
 
 		Endereco obj = service.buscar(id);
 

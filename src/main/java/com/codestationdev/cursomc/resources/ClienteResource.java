@@ -21,7 +21,7 @@ public class ClienteResource {
 	private ClienteService service;
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public ResponseEntity<?> findId(@PathVariable Integer id) {
+	public ResponseEntity<Cliente> findId(@PathVariable Integer id) {
 
 		Cliente obj = service.buscar(id);
 
@@ -29,7 +29,7 @@ public class ClienteResource {
 	};
 	
 	@RequestMapping(value = "/findAll", method = RequestMethod.GET)
-	public List<?> findAll(){
+	public List<Cliente> findAll(){
 	   return service.findAll();
 	}
 	
